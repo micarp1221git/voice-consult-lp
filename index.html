@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>声の無料個別相談｜ボイストレーナーみか</title>
+<meta name="description" content="その声で、相手は動いていますか。まずはあなたの声の現在地を一緒に知る、無料オンライン個別相談。ボイストレーナー歴20年のみかがお相手します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base:#FFF8F5;
+    --mist:#FBECE4;
+    --ink:#3D3535;
+    --accent:#E8815B;
+    --accent-d:#D96A43;
+    --accent2:#F7DDD0;
+    --dark:#3B2A25;
+    --maxw:680px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Serif JP",serif;
+    color:var(--ink);
+    background:var(--dark);
+    line-height:1.9;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    font-weight:400;
+  }
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    background:var(--base);
+    overflow:hidden;
+    box-shadow:0 0 60px rgba(0,0,0,.25);
+  }
+  h1,h2,h3,.mincho{font-family:"Shippori Mincho",serif;}
+  h2{
+    font-size:clamp(22px,5.6vw,28px);
+    font-weight:800;
+    line-height:1.55;
+    text-wrap:balance;
+    letter-spacing:.01em;
+  }
+  section{padding:56px 24px}
+  .mist{background:var(--mist)}
+  .eyebrow{
+    display:inline-block;
+    font-family:"Shippori Mincho",serif;
+    font-size:12px;
+    letter-spacing:.22em;
+    color:var(--accent-d);
+    font-weight:700;
+    margin-bottom:16px;
+  }
+  p{margin-top:16px}
+  .lead{font-size:17px}
+  .small{font-size:13.5px;color:#8a7a74}
+  strong{color:var(--accent-d);font-weight:600}
+
+  /* HERO */
+  .hero{position:relative;padding:0;background:var(--base)}
+  .hero-img{width:100%;aspect-ratio:1024/1180;object-fit:cover;object-position:center 30%;display:block}
+  .hero-body{padding:36px 24px 48px;text-align:center;position:relative;margin-top:-56px}
+  .hero-card{
+    background:rgba(255,248,245,.92);
+    backdrop-filter:blur(6px);
+    border-radius:22px;
+    padding:32px 24px 30px;
+    box-shadow:0 18px 40px rgba(217,106,67,.14);
+    border:1px solid #fff;
+  }
+  h1{
+    font-size:clamp(24px,6.2vw,34px);
+    font-weight:800;
+    line-height:1.55;
+    text-wrap:balance;
+    letter-spacing:0;
+  }
+  .hero-card p{font-size:15.5px}
+
+  /* CTA button */
+  .cta{
+    display:inline-block;
+    width:100%;
+    max-width:420px;
+    padding:18px 28px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-d));
+    color:#fff;
+    font-family:"Shippori Mincho",serif;
+    font-weight:700;
+    font-size:17px;
+    text-decoration:none;
+    border-radius:999px;
+    box-shadow:0 12px 26px rgba(217,106,67,.34);
+    transition:transform .15s ease,box-shadow .15s ease;
+    letter-spacing:.02em;
+  }
+  .cta:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(217,106,67,.42)}
+  .cta-note{margin-top:12px;font-size:12.5px;color:#9a8a83}
+
+  /* section image */
+  .simg{
+    width:100%;aspect-ratio:1/1;object-fit:cover;
+    border-radius:20px;display:block;
+    box-shadow:0 12px 30px rgba(59,42,37,.10);
+  }
+
+  /* aspiration quote */
+  .aspire{
+    font-family:"Shippori Mincho",serif;
+    font-size:clamp(19px,5vw,23px);
+    line-height:1.7;
+    font-weight:700;
+    color:var(--ink);
+  }
+
+  /* cards / list */
+  .checklist{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:12px}
+  .checklist li{
+    background:#fff;border-radius:16px;padding:16px 18px 16px 48px;position:relative;
+    box-shadow:0 4px 14px rgba(59,42,37,.06);font-size:15.5px;line-height:1.7;
+  }
+  .checklist li::before{
+    content:"";position:absolute;left:18px;top:20px;width:16px;height:16px;border-radius:50%;
+    background:var(--accent2);
+    box-shadow:inset 0 0 0 2px var(--accent);
+  }
+
+  /* before after */
+  .ba{display:flex;flex-direction:column;gap:14px;margin-top:26px}
+  .ba-card{border-radius:18px;padding:22px;line-height:1.8}
+  .ba-before{background:#F0EAE7;color:#7d716b}
+  .ba-before .t{font-family:"Shippori Mincho";font-weight:700;font-size:13px;letter-spacing:.1em;color:#a89a93}
+  .ba-arrow{text-align:center;color:var(--accent);font-size:24px;line-height:1}
+  .ba-after{background:var(--accent2)}
+  .ba-after .t{font-family:"Shippori Mincho";font-weight:800;font-size:13px;letter-spacing:.1em;color:var(--accent-d)}
+  .ba .row{display:flex;gap:10px;margin-top:10px;font-size:15px}
+  .ba .row:first-of-type{margin-top:14px}
+
+  /* concept box */
+  .concept{
+    background:#fff;border-radius:20px;padding:28px 24px;margin-top:22px;
+    box-shadow:0 10px 30px rgba(217,106,67,.10);border:1px solid var(--accent2);
+  }
+
+  /* steps */
+  .steps{counter-reset:s;margin-top:24px;display:flex;flex-direction:column;gap:14px}
+  .steps li{list-style:none;position:relative;padding:16px 18px 16px 60px;background:#fff;border-radius:16px;box-shadow:0 4px 14px rgba(59,42,37,.06)}
+  .steps li::before{
+    counter-increment:s;content:counter(s);
+    position:absolute;left:16px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;
+    font-family:"Shippori Mincho";font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;
+  }
+
+  /* voice / testimonial */
+  .voices{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+  .voice{
+    background:#fff;border-left:4px solid var(--accent);border-radius:0 14px 14px 0;
+    padding:16px 18px;font-size:15.5px;box-shadow:0 4px 14px rgba(59,42,37,.05);
+  }
+  .voice span{display:block;margin-top:6px;font-size:12.5px;color:#9a8a83}
+
+  /* profile */
+  .profile{display:flex;align-items:center;gap:18px;margin-top:26px}
+  .profile img{width:112px;height:112px;border-radius:50%;object-fit:cover;object-position:center 20%;box-shadow:0 8px 22px rgba(59,42,37,.16);flex-shrink:0;border:3px solid #fff}
+  .profile .pname{font-family:"Shippori Mincho",serif;font-weight:800;font-size:19px}
+  .profile .prole{font-size:13px;color:#8a7a74;margin-top:5px;letter-spacing:.02em}
+
+  /* trust stats */
+  .stats{display:flex;gap:12px;margin-top:22px}
+  .stat{flex:1;background:#fff;border-radius:16px;padding:18px 10px;text-align:center;box-shadow:0 4px 14px rgba(59,42,37,.06)}
+  .stat b{display:block;font-family:"Shippori Mincho";font-weight:800;font-size:26px;color:var(--accent-d);font-variant-numeric:tabular-nums}
+  .stat small{font-size:12px;color:#8a7a74}
+
+  /* FAQ */
+  details{background:#fff;border-radius:14px;margin-top:12px;overflow:hidden;box-shadow:0 4px 14px rgba(59,42,37,.05)}
+  summary{
+    list-style:none;cursor:pointer;padding:18px 46px 18px 20px;position:relative;
+    font-family:"Shippori Mincho";font-weight:700;font-size:15.5px;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"＋";position:absolute;right:18px;top:16px;color:var(--accent);font-size:20px;transition:transform .2s}
+  details[open] summary::after{content:"−"}
+  details .a{padding:0 20px 20px;font-size:15px;color:#5a4e49}
+
+  /* dark closing */
+  .closing{background:var(--dark);color:#f6ece7;text-align:center}
+  .closing h2{color:#fff}
+  .closing p{color:#e5d5cd}
+  .closing .cta{margin-top:28px}
+
+  /* fixed bar */
+  .bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:rgba(255,248,245,.86);backdrop-filter:blur(10px);
+    border-top:1px solid var(--accent2);
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    display:flex;justify-content:center;
+    box-shadow:0 -6px 20px rgba(59,42,37,.08);
+  }
+  .bar a{
+    display:block;width:100%;max-width:var(--maxw);text-align:center;
+    padding:15px;background:linear-gradient(135deg,var(--accent),var(--accent-d));
+    color:#fff;font-family:"Shippori Mincho";font-weight:700;border-radius:999px;text-decoration:none;
+    box-shadow:0 8px 20px rgba(217,106,67,.32);font-size:16px;
+  }
+  body{padding-bottom:80px}
+  .center{text-align:center}
+  section .cta-wrap{margin-top:28px;text-align:center}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  @media(min-width:520px){
+    .ba{flex-direction:column}
+    .hero-body{margin-top:-72px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. HERO -->
+  <header class="hero">
+    <img class="hero-img" src="voice_hero.png" alt="自信を持って話す人に、周りが身を乗り出して聴いている">
+    <div class="hero-body">
+      <div class="hero-card">
+        <span class="eyebrow">無料オンライン個別相談</span>
+        <h1>その声で、<br>相手は動いていますか。</h1>
+        <p class="lead">同じ話でも、<br>声で伝わり方は変わります。</p>
+        <p class="lead">あなたの声には、まだ<br>乗っていない魅力があります。</p>
+        <p class="lead">まずは、その現在地を<br>一緒に知ることから。</p>
+        <div class="cta-wrap" style="margin-top:24px">
+          <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdstb8oPG7ti3rJceixvYHL-EAdpxRcnhO4N-EUyrBIpCKIew/viewform" target="_blank" rel="noopener">無料で個別相談を申し込む</a>
+          <p class="cta-note">オンライン・無料｜声だけで猫背が分かるボイストレーナーがお相手します</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. 気づき -->
+  <section>
+    <span class="eyebrow">ふと、思うこと</span>
+    <p class="aspire">あの人の話は、なぜかスッと入ってくる。</p>
+    <p>会議でも、プレゼンでも、配信でも。<br>自然と相手が耳を傾ける、あの声。</p>
+    <p>あんなふうに話せたら、と思ったことはありませんか。</p>
+    <p>あれは、生まれ持った才能なのでしょうか。</p>
+    <img class="simg" src="voice_scene.png" alt="話に引き込まれ、うなずいて聴く聞き手" style="margin-top:26px">
+  </section>
+
+  <!-- 3. 原因の再定義 -->
+  <section class="mist">
+    <span class="eyebrow">CAUSE</span>
+    <h2>伝わる声は、生まれつきでも<br>才能でもありません。</h2>
+    <p>声は「技術」です。</p>
+    <p>相手に届くかどうかを決めているのは、声質でも、滑舌でもありません。<strong>息の使い方</strong>と、<strong>声を響かせる場所</strong>です。</p>
+    <p>多くの人が、そこを一度も教わらないまま、なんとなく声を出しています。</p>
+    <p>だから、知らなかっただけ。あなたの努力が足りなかったわけではありません。</p>
+  </section>
+
+  <!-- 4. 解決原理 -->
+  <section>
+    <span class="eyebrow">SOLUTION</span>
+    <h2>響かせる場所が変わると、<br>相手の受け取り方が変わる。</h2>
+    <div class="concept">
+      <p style="margin-top:0">わたしのレッスンでは、まず今の声の使い方を見ます。<br>息がどこで止まっているか。どこで響かせているか。</p>
+      <p>ほんの少し変えるだけで、声は前に出て、深くなり、長く話しても疲れなくなります。</p>
+      <p>「頑張って大きな声を出す」の、逆です。<br><strong>力を抜くほど、届く声になります。</strong></p>
+    </div>
+    <img class="simg" src="voice_solution.png" alt="力まず自然に話す人と、笑顔で受けとめる相手" style="margin-top:24px">
+  </section>
+
+  <!-- 5. Before / After -->
+  <section class="mist">
+    <span class="eyebrow">CHANGE</span>
+    <h2>相手が身を乗り出す声、<br>信頼される声へ。</h2>
+    <div class="ba">
+      <div class="ba-card ba-before">
+        <div class="t">BEFORE</div>
+        <div class="row">力で押し出していて、後半で声がもたない</div>
+        <div class="row">録音を聞き返すと「こんな声だっけ」と感じる</div>
+        <div class="row">話し終わると、喉がどっと疲れている</div>
+      </div>
+      <div class="ba-arrow">↓</div>
+      <div class="ba-card ba-after">
+        <div class="t">AFTER</div>
+        <div class="row">息に乗る、楽な声になる</div>
+        <div class="row">1時間以上話しても、声が枯れにくい</div>
+        <div class="row">「聞こえやすい」「わかりやすい」と言われる</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 個別相談とは -->
+  <section>
+    <span class="eyebrow">無料オンライン個別相談</span>
+    <h2>まず、あなたの声の「現在地」を<br>一緒に知りませんか。</h2>
+    <p>あなたの声の悩みを聞かせてください。<br>声のプロの視点で、今どこにいて、何を変えると近づくのかを、一緒に整理します。</p>
+    <img class="simg" src="voice_consult.png" alt="オンラインで親身に相談している様子" style="margin-top:24px">
+    <div class="cta-wrap">
+      <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdstb8oPG7ti3rJceixvYHL-EAdpxRcnhO4N-EUyrBIpCKIew/viewform" target="_blank" rel="noopener">無料で個別相談を申し込む</a>
+      <p class="cta-note">オンライン・無料</p>
+    </div>
+  </section>
+
+  <!-- 7. こんな場面 / 進め方 -->
+  <section class="mist">
+    <span class="eyebrow">ひとつでも、ありませんか</span>
+    <h2>どれか、心当たりはありませんか？</h2>
+    <ul class="checklist">
+      <li>大事な商談やプレゼンで、あと一歩、伝えきりたい</li>
+      <li>配信や動画で、自分の声がなんとなく気になる</li>
+      <li>長く話すと、後半で声がもたない</li>
+    </ul>
+    <h3 class="mincho" style="margin-top:40px;font-size:18px;font-weight:800">当日までの流れ</h3>
+    <ul class="steps">
+      <li>下のフォームから申し込む</li>
+      <li>日程を調整する</li>
+      <li>オンラインで個別相談を受ける</li>
+    </ul>
+  </section>
+
+  <!-- 8. 信頼 -->
+  <section>
+    <span class="eyebrow">ABOUT</span>
+    <h2>声を聞けば、猫背が分かる。<br>20年、声だけを見てきました。</h2>
+    <div class="profile">
+      <img src="mika_profile.png" alt="ボイストレーナーみか">
+      <div>
+        <div class="pname">ボイストレーナーみか</div>
+        <div class="prole">ボイストレーナー／Udemy講師</div>
+      </div>
+    </div>
+    <p>どうも、ボイストレーナーみかです。</p>
+    <p>ボイストレーナー歴20年。Udemyでも声の講座を出しています。</p>
+    <p>たくさんの声を聴いてきたおかげで、今では声を聞くだけで、その人の姿勢や息の使い方が分かるようになりました。</p>
+    <img class="simg" src="voice_trust.png" alt="話し終えて信頼のまなざしで迎えられる場面" style="margin-top:24px">
+    <div class="stats">
+      <div class="stat"><b>20</b><small>ボイストレーナー歴（年）</small></div>
+      <div class="stat"><b>Udemy</b><small>声の講座を配信中</small></div>
+    </div>
+    <h3 class="mincho" style="margin-top:36px;font-size:17px;font-weight:800">レッスンでいただく声</h3>
+    <div class="voices">
+      <div class="voice">「声の出し方が変わった！すごい！」</div>
+      <div class="voice">「今まで、頑張り方を間違えてた。」</div>
+      <div class="voice">「こんなにラクに出せるようになるんですね。」</div>
+      <div class="voice">「私の声って、こんなに表現力があったんですね。」</div>
+    </div>
+  </section>
+
+  <!-- 9. FAQ -->
+  <section class="mist">
+    <span class="eyebrow">FAQ</span>
+    <h2>よくあるご質問</h2>
+    <details>
+      <summary>顔出しは必要ですか？</summary>
+      <div class="a">必須ではありません。声だけで猫背が分かるボイストレーナーですので（笑）、声を聞かせていただければ大丈夫です。</div>
+    </details>
+    <details>
+      <summary>何を準備すればいいですか？</summary>
+      <div class="a">特にありません。今の声の悩みや、なりたい声を思い浮かべてきていただけると、話がスムーズです。</div>
+    </details>
+    <details>
+      <summary>歌のレッスンですか？</summary>
+      <div class="a">いいえ。話す声、伝える声が中心です。人前で話す・配信する・伝える場面のための声を扱います。</div>
+    </details>
+  </section>
+
+  <!-- 10 + 11. 背中押し + CTA -->
+  <section class="closing">
+    <span class="eyebrow" style="color:var(--accent2)">LAST</span>
+    <h2>声は、変えられます。<br>まずは、知ることから。</h2>
+    <p>生まれ持った声を、否定する必要はありません。<br>あなたの声には、まだ引き出されていない魅力があります。</p>
+    <p>それを一緒に見つけるところから、始めましょう。</p>
+    <div class="cta-wrap">
+      <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdstb8oPG7ti3rJceixvYHL-EAdpxRcnhO4N-EUyrBIpCKIew/viewform" target="_blank" rel="noopener">無料で個別相談を申し込む</a>
+      <p class="cta-note" style="color:#c9b3a9">オンライン・無料</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- fixed CTA bar -->
+<div class="bar">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdstb8oPG7ti3rJceixvYHL-EAdpxRcnhO4N-EUyrBIpCKIew/viewform" target="_blank" rel="noopener">無料で個別相談を申し込む</a>
+</div>
+
+</body>
+</html>

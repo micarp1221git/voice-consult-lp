@@ -234,7 +234,7 @@
         <p class="lead">あなたの声には、まだ<br>乗っていない魅力があります。</p>
         <p class="lead">まずは、その現在地を<br>一緒に知ることから。</p>
         <div class="cta-wrap" style="margin-top:24px">
-          <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdstb8oPG7ti3rJceixvYHL-EAdpxRcnhO4N-EUyrBIpCKIew/viewform" target="_blank" rel="noopener">無料で個別相談を申し込む</a>
+          <a class="cta" href="https://micarp1221git.github.io/Form-link-page/booking.html?type=consult&f=lp" data-consult>無料で個別相談を申し込む</a>
           <p class="cta-note">オンライン・無料｜声だけで猫背が分かるボイストレーナーがお相手します</p>
         </div>
       </div>
@@ -301,7 +301,7 @@
     <p>あなたの声の悩みを聞かせてください。<br>声のプロの視点で、今どこにいて、何を変えると近づくのかを、一緒に整理します。</p>
     <img class="simg" src="voice_consult.png" alt="オンラインで親身に相談している様子" style="margin-top:24px">
     <div class="cta-wrap">
-      <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdstb8oPG7ti3rJceixvYHL-EAdpxRcnhO4N-EUyrBIpCKIew/viewform" target="_blank" rel="noopener">無料で個別相談を申し込む</a>
+      <a class="cta" href="https://micarp1221git.github.io/Form-link-page/booking.html?type=consult&f=lp" data-consult>無料で個別相談を申し込む</a>
       <p class="cta-note">オンライン・無料</p>
     </div>
   </section>
@@ -384,7 +384,7 @@
     <p>生まれ持った声を、否定する必要はありません。<br>あなたの声には、まだ引き出されていない魅力があります。</p>
     <p>それを一緒に見つけるところから、始めましょう。</p>
     <div class="cta-wrap">
-      <a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdstb8oPG7ti3rJceixvYHL-EAdpxRcnhO4N-EUyrBIpCKIew/viewform" target="_blank" rel="noopener">無料で個別相談を申し込む</a>
+      <a class="cta" href="https://micarp1221git.github.io/Form-link-page/booking.html?type=consult&f=lp" data-consult>無料で個別相談を申し込む</a>
       <p class="cta-note" style="color:#c9b3a9">オンライン・無料</p>
     </div>
   </section>
@@ -393,8 +393,13 @@
 
 <!-- fixed CTA bar -->
 <div class="bar">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdstb8oPG7ti3rJceixvYHL-EAdpxRcnhO4N-EUyrBIpCKIew/viewform" target="_blank" rel="noopener">無料で個別相談を申し込む</a>
+  <a href="https://micarp1221git.github.io/Form-link-page/booking.html?type=consult&f=lp" data-consult>無料で個別相談を申し込む</a>
 </div>
 
+<script>
+// 2026-10-15 申込は予約ページへ。このLPを ?f=shindan のように開いたら、その印を予約まで運ぶ（どこから来た相談かを作業台で数えるため）
+(function(){try{var f=new URLSearchParams(location.search).get('f');if(!f||!/^[\w-]{1,30}$/.test(f))return;
+document.querySelectorAll('a[data-consult]').forEach(function(a){a.href='https://micarp1221git.github.io/Form-link-page/booking.html?type=consult&f=lp-'+f;});}catch(e){}})();
+</script>
 </body>
 </html>
